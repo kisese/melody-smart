@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#FFFFFF"
+    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        >
+        <com.andexert.library.RippleView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:rv_color="@color/colorPrimary"
+            app:rv_framerate="20"
+            app:rv_zoomScale="1.1"
+            app:rv_zoom="true"
+            rv_centered="true">
+
+
+        <ImageView
+            android:id="@+id/login_with_fb"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginRight="40dp"
+            android:src="@drawable/fb_menu"
+            />
+</com.andexert.library.RippleView>
+
+        <com.andexert.library.RippleView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:rv_color="@color/colorPrimary"
+            app:rv_framerate="20"
+            app:rv_zoomScale="1.1"
+            app:rv_zoom="true"
+            rv_centered="true">
+        <ImageView
+            android:id="@+id/create_gloveset"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/gloveset_pic"
+            android:onClick="createGloveset"
+            />
+        </com.andexert.library.RippleView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login with Facebook"
+            android:layout_marginRight="40dp"
+            android:textColor="@color/textColorSecondary"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Glovesets"
+            android:textColor="@color/textColorSecondary"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        >
+
+        <com.andexert.library.RippleView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:rv_color="@color/colorAccent"
+            app:rv_framerate="20"
+            app:rv_zoomScale="1.1"
+            app:rv_zoom="true"
+            rv_centered="true">
+
+        <ImageView
+            android:id="@+id/community_gloveset"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/community_pic"
+            android:layout_marginRight="40dp"
+            />
+
+</com.andexert.library.RippleView>
+
+        <com.andexert.library.RippleView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:rv_color="@color/colorAccent"
+            app:rv_framerate="20"
+            app:rv_zoomScale="1.1"
+            app:rv_zoom="true"
+            rv_centered="true">
+        <ImageView
+            android:id="@+id/saved_gloveset"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/saved_pics"
+            android:onClick="savedGlovesets"
+            />
+
+        </com.andexert.library.RippleView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="10dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Community Glovesets"
+            android:layout_marginRight="40dp"
+            android:textColor="@color/textColorSecondary"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saved Glovesets"
+            android:textColor="@color/textColorSecondary"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        >
+
+        <com.andexert.library.RippleView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:rv_color="@color/colorAccent"
+            app:rv_framerate="20"
+            app:rv_zoomScale="1.1"
+            app:rv_zoom="true"
+            rv_centered="true">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/community_pic"
+                android:layout_marginRight="40dp"
+                />
+
+        </com.andexert.library.RippleView>
+
+        <com.andexert.library.RippleView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:rv_color="@color/colorAccent"
+            app:rv_framerate="20"
+            app:rv_zoomScale="1.1"
+            app:rv_zoom="true"
+            rv_centered="true">
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/community_pic"
+                android:onClick="savedGlovesets"
+                />
+
+        </com.andexert.library.RippleView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="10dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mask"
+            android:layout_marginRight="120dp"
+            android:textColor="@color/textColorSecondary"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shoes"
+            android:textColor="@color/textColorSecondary"
+            />
+    </LinearLayout>
+</LinearLayout>
+    </ScrollView>

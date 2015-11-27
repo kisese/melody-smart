@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Please select an effect"
+        android:textColor="@color/colorPrimary"
+        android:typeface="sans"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingTop="5dp"
+        android:textSize="13dip"
+        android:layout_alignParentRight="true"
+        />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <RadioGroup
+        android:id="@+id/effects_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        >
+
+        <RadioButton
+            android:id="@+id/effect_knight_rider_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:text="Knight Rider 1"/>
+
+        <RadioButton
+            android:id="@+id/effect_knight_rider_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:layout_marginTop="20dp"
+            android:text="Knight Rider 2"/>
+
+        <RadioButton
+            android:id="@+id/effect_knight_rider_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:layout_marginTop="20dp"
+            android:text="Knight Rider 3"/>
+
+        <RadioButton
+            android:id="@+id/effect_knight_rider_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:layout_marginTop="20dp"
+            android:text="Knight Rider 4"/>
+
+        <RadioButton
+            android:id="@+id/effect_rainbow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:layout_marginTop="20dp"
+            android:text="Rainbow"/>
+
+        <RadioButton
+            android:id="@+id/effect_cycle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:layout_marginTop="20dp"
+            android:text="Rainbow Cycle"/>
+
+        <RadioButton
+            android:id="@+id/effect_no_effect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:layout_marginTop="20dp"
+            android:text="No Effect"/>
+    </RadioGroup>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.felipecsl.gifimageview.library.GifImageView
+
+                android:id="@+id/knight_rider_1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:src="@drawable/knightrider_1"
+                android:layout_marginTop="10dp"
+                />
+
+            <com.felipecsl.gifimageview.library.GifImageView
+                android:id="@+id/knight_rider_2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:src="@drawable/knightrider_2"
+                android:layout_marginTop="10dp"
+                />
+
+            <com.felipecsl.gifimageview.library.GifImageView
+                android:id="@+id/knight_rider_3"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:src="@drawable/knightrider_3"
+                android:layout_marginTop="10dp"
+                />
+
+            <com.felipecsl.gifimageview.library.GifImageView
+                android:id="@+id/knight_rider_4"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:src="@drawable/knightrider_4"
+                android:layout_marginTop="10dp"
+                />
+
+            <com.felipecsl.gifimageview.library.GifImageView
+                android:id="@+id/rainbow"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:src="@drawable/rainbow"
+                android:layout_marginTop="10dp"
+                />
+
+            <com.felipecsl.gifimageview.library.GifImageView
+                android:id="@+id/rainbow_cycle"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:src="@drawable/rainbow_cycle"
+                android:layout_marginTop="10dp"
+                />
+            </LinearLayout>
+</LinearLayout>
+    <com.gc.materialdesign.views.ButtonRectangle
+        android:id="@+id/effects_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:background="@color/colorAccent"
+        android:text="Next"
+        materialdesign:animate="true" />
+
+</LinearLayout>
+    </ScrollView>

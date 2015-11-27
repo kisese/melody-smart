@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/color_screen">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/color1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#af2c2c"
+            />
+
+        <Button
+            android:id="@+id/color2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#2cafaf"
+            />
+
+        <Button
+            android:id="@+id/color3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#ab2caf"
+            />
+
+        <Button
+            android:id="@+id/color4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#dabf25"
+            />
+
+        <Button
+            android:id="@+id/color5"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#a82caf"
+            />
+
+        <Button
+            android:id="@+id/color6"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="#2c40af"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+        <Button
+            android:id="@+id/color7"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#da25a1"
+            />
+
+        <Button
+            android:id="@+id/color8"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#3edaf5"
+            />
+
+        <Button
+            android:id="@+id/color9"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="#e67755"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+
+    </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Swipe right for more options"
+        android:textColor="@color/colorPrimary"
+        android:padding="10dp"
+        />
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="horizontal">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/finger_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textColor="@color/colorAccent" />
+
+                <TextView
+                    android:id="@+id/finger_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    android:textColor="@color/colorAccent"
+                    android:layout_marginTop="25dp"
+                    />
+
+                <TextView
+                    android:id="@+id/finger_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+                    android:textColor="@color/colorAccent"
+                    android:layout_marginTop="25dp"
+                    />
+
+                <TextView
+                    android:id="@+id/finger_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4"
+                    android:textColor="@color/colorAccent"
+                    android:layout_marginTop="20dp"
+                    />
+</LinearLayout>
+            <include
+                android:id="@+id/finger_colors"
+                layout="@layout/finger_colors" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+        <com.gc.materialdesign.views.ButtonFlat
+            android:id="@+id/colors_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:background="@color/colorAccent"
+            android:text="Next"
+            android:paddingBottom="10dp"
+            materialdesign:animate="true" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Please select a pattern"
+        android:typeface="sans"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:paddingTop="5dp"
+        android:textSize="13dip"
+        android:layout_alignParentRight="true"
+        />
+
+    <Button
+        android:text="Create Pattern"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <RadioGroup
+        android:id="@+id/patterns_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="30dp"
+        >
+
+        <RadioButton
+            android:id="@+id/pattern_strobe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:text="Strobe"/>
+
+        <RadioButton
+            android:id="@+id/pattern_hyperstrobe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:layout_marginTop="10dp"
+            android:text="Hyperstrobe"/>
+
+        <RadioButton
+            android:id="@+id/pattern_dops"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:layout_marginTop="10dp"
+            android:text="Dops"/>
+
+        <RadioButton
+            android:id="@+id/pattern_strobie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:layout_marginTop="10dp"
+            android:text="Strobie"/>
+
+        <RadioButton
+            android:id="@+id/pattern_chroma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:layout_marginTop="10dp"
+            android:text="Chroma"/>
+    </RadioGroup>
+
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.felipecsl.gifimageview.library.GifImageView
+                android:id="@+id/strobe"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:src="@drawable/strobe"
+                />
+
+            <com.felipecsl.gifimageview.library.GifImageView
+                android:id="@+id/hyperstrobe"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:src="@drawable/hyper"
+                />
+
+            <com.felipecsl.gifimageview.library.GifImageView
+                android:id="@+id/dops"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:src="@drawable/dops"
+                />
+
+            <com.felipecsl.gifimageview.library.GifImageView
+                android:id="@+id/strobie"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:src="@drawable/strobie"
+                />
+
+            <com.felipecsl.gifimageview.library.GifImageView
+                android:id="@+id/chroma"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:src="@drawable/chroma"
+                />
+
+            </LinearLayout>
+
+</LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="Customs"
+        android:layout_marginLeft="30dp"
+        android:textSize="20sp"
+        />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        >
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:text="Laser"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:layout_marginTop="10dp"
+            android:text="Hypno"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:layout_marginTop="10dp"
+            android:text="Green Fog"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:layout_marginTop="10dp"
+            android:text="Frankenstein"/>
+
+    </RadioGroup>
+
+
+    <RadioGroup
+        android:id="@+id/patterns_colors"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        >
+
+        <RadioButton
+            android:id="@+id/finger_1_radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:layout_marginRight="10dp"
+            android:text="Index"
+            />
+
+        <RadioButton
+            android:id="@+id/finger_2_radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:layout_marginRight="10dp"
+            android:text="Middle"
+            />
+
+        <RadioButton
+            android:id="@+id/finger_3_radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:layout_marginRight="10dp"
+            android:text="Ring"
+           />
+
+        <RadioButton
+            android:id="@+id/finger_4_radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:text="Pinkie"
+         />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:paddingLeft="30dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Laser"
+            android:layout_marginLeft="30dp"
+            android:rotation="270"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Strobe"
+            android:layout_marginLeft="40dp"
+            android:rotation="270"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Ribbon"
+            android:layout_marginLeft="40dp"
+            android:rotation="270"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Hypno"
+            android:layout_marginLeft="40dp"
+            android:rotation="270"
+            />
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/no_pattern"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apply Pattern to all fingers"
+        />
+
+    <com.gc.materialdesign.views.ButtonRectangle
+        android:id="@+id/patterns_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:background="@color/colorAccent"
+        android:text="Next"
+        materialdesign:animate="true" />
+
+
+</LinearLayout>
+    </ScrollView>

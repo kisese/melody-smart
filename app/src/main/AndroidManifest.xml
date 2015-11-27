@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yhtomit.brayo.bleserial" >
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
+
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/MyMaterialTheme" >
+        <activity
+            android:name="com.yhtomit.brayo.bleserial.activity.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name="com.yhtomit.brayo.bleserial.activity.MotionRegularActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <activity
+            android:name="com.yhtomit.brayo.bleserial.activity.Finger1PatternActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <activity
+            android:name="com.yhtomit.brayo.bleserial.activity.Finger2PatternActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <activity
+            android:name="com.yhtomit.brayo.bleserial.activity.Finger3PatternActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <activity
+            android:name="com.yhtomit.brayo.bleserial.activity.Finger4PatternActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <activity
+            android:name="com.yhtomit.brayo.bleserial.activity.ColorsActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <activity
+            android:name="com.yhtomit.brayo.bleserial.activity.SendSaveActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <activity
+            android:name="com.yhtomit.brayo.bleserial.activity.HandActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <activity
+            android:name="com.yhtomit.brayo.bleserial.activity.EffectsActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <activity
+            android:name="com.yhtomit.brayo.bleserial.activity.MotionTriggeredGlovesetActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <activity
+            android:name="com.yhtomit.brayo.bleserial.activity.AllPresetsActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <activity
+            android:name="com.yhtomit.brayo.bleserial.activity.BLEScanActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <activity
+            android:name="com.yhtomit.brayo.bleserial.activity.BLESendActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <activity
+            android:name="com.yhtomit.brayo.bleserial.activity.MelodySmartTestActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <activity
+            android:name="com.yhtomit.brayo.bleserial.activity.ScanActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <activity
+            android:name="com.yhtomit.brayo.bleserial.activity.MotionHandActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <service android:name="com.yhtomit.brayo.bleserial.activity.BluetoothLeService"
+            android:enabled="true"/>
+    </application>
+
+</manifest>

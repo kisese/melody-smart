@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    >
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <ListView
+        android:id="@+id/preset_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:divider="#dcdcdc"
+        android:dividerHeight="1dp"
+        android:layout_weight="1"
+        android:listSelector="@drawable/gradient_bg"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:paddingBottom="5dp"
+        android:layout_marginRight="10dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sensitivity"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        />
+
+    <SeekBar
+        android:id="@+id/sensitivity_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        />
+
+    <TextView
+        android:id="@+id/sensitivity_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="250"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        />
+
+    <TextView
+        android:id="@+id/feedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/colorAccent"
+        android:textSize="8pt"
+        android:layout_marginBottom="20dp"
+        android:padding="20dp"
+        />
+</LinearLayout>

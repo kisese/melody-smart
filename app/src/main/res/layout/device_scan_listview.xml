@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/strobe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/strobe"
+        />
+
+    <com.gc.materialdesign.views.ButtonFlat
+        android:id="@+id/scan_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/colorAccent"
+        android:text="Scan"
+        android:paddingBottom="10dp"
+        materialdesign:animate="true" />
+
+    <com.gc.materialdesign.views.ProgressBarCircularIndeterminate
+        android:id="@+id/progress"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center"
+        android:background="#1E88E5" />
+
+    <ListView
+        android:id="@+id/device_listview"
+        android:layout_width="wrap_content"
+        android:divider="#00FFFFFF"
+        android:dividerHeight="5dp"
+        android:layout_height="wrap_content"
+        />
+
+</LinearLayout>

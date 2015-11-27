@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:local="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        local:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        local:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:src="@drawable/gloetech"
+            android:padding="5dp"
+            />
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:orientation="vertical">
+
+        <com.andexert.library.RippleView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:rv_color="@color/colorPrimary"
+            app:rv_framerate="20"
+            app:rv_zoomScale="1.1"
+            app:rv_zoom="true"
+            rv_centered="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/motion_black"
+                />
+
+        <Button
+            android:id="@+id/btn_motion_triggered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:padding="5dp"
+            android:text="Motion Triggered"
+            android:background="@drawable/white_bg"
+            android:drawableRight="@drawable/ic_help"
+            android:drawablePadding="5dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#808080"
+            android:shadowColor="#00FFFFFF"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="4.0"
+            />
+        </LinearLayout>
+        </com.andexert.library.RippleView>
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Combine any two saved glovesets to create a motion triggered set"-->
+            <!--android:layout_marginLeft="80dp"-->
+            <!--android:textSize="12sp"-->
+            <!--android:textColor="#dcdcdc"-->
+            <!--/>-->
+
+        <com.andexert.library.RippleView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:rv_color="@color/colorPrimary"
+            app:rv_framerate="20"
+            app:rv_zoomScale="1.1"
+            app:rv_zoom="true"
+            rv_centered="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/sound_black"
+                />
+            <Button
+                android:id="@+id/btn_sound_reactive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:paddingBottom="5dp"
+                android:textStyle="bold"
+                android:drawableRight="@drawable/ic_help"
+                android:drawablePadding="5dp"
+                android:paddingLeft="5dp"
+                android:background="@drawable/white_bg"
+                android:textSize="18sp"
+                android:textColor="#808080"
+                android:shadowColor="#00FFFFFF"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="4.0"
+                android:text="Sound Reactive" />
+            </LinearLayout>
+        </com.andexert.library.RippleView>
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Make your lights react to music"-->
+            <!--android:layout_marginLeft="80dp"-->
+            <!--android:textSize="12sp"-->
+            <!--android:textColor="#FFFFFF"-->
+            <!--/>-->
+
+        <com.andexert.library.RippleView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:rv_color="@color/colorPrimary"
+            app:rv_framerate="20"
+            app:rv_zoomScale="1.1"
+            app:rv_zoom="true"
+            rv_centered="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/sync_black"
+                />
+
+            <Button
+                android:id="@+id/btn_sync_lights"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:drawableRight="@drawable/ic_help"
+                android:drawablePadding="5dp"
+                android:background="@drawable/white_bg"
+                android:textSize="18sp"
+                android:textColor="#808080"
+                android:shadowColor="#00FFFFFF"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="4.0"
+                android:text="Synchronize Your Lights" />
+
+            </LinearLayout>
+        </com.andexert.library.RippleView>
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Synchronized flashing patterns"-->
+            <!--android:layout_marginLeft="80dp"-->
+            <!--android:textSize="12sp"-->
+            <!--android:textColor="#ffffff"-->
+            <!--/>-->
+
+        <com.andexert.library.RippleView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:rv_color="@color/colorPrimary"
+            app:rv_framerate="20"
+            app:rv_zoomScale="1.1"
+            app:rv_zoom="true"
+            rv_centered="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/regular_black"
+                />
+            <Button
+                android:id="@+id/btn_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:textStyle="bold"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:drawableRight="@drawable/ic_help"
+                android:drawablePadding="5dp"
+                android:background="@drawable/white_bg"
+                android:textSize="18sp"
+                android:textColor="#808080"
+                android:shadowColor="#00FFFFFF"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="4.0"
+                android:text="Regular Gloveset" />
+
+          </LinearLayout>
+        </com.andexert.library.RippleView>
+
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="A regular Glove set"-->
+            <!--android:layout_marginLeft="80dp"-->
+            <!--android:textSize="12sp"-->
+            <!--android:textColor="#ffffff"-->
+            <!--/>-->
+
+
+        <com.andexert.library.RippleView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:rv_color="@color/colorPrimary"
+            app:rv_framerate="20"
+            app:rv_zoomScale="1.1"
+            app:rv_zoom="true"
+            rv_centered="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/clock_black"
+                />
+            <Button
+                android:id="@+id/btn_time_controlled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:drawableRight="@drawable/ic_help"
+                android:drawablePadding="5dp"
+                android:background="@drawable/white_bg"
+                android:textSize="18sp"
+                android:textColor="#808080"
+                android:shadowColor="#00FFFFFF"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="4.0"
+                android:text="Time Controlled Show" />
+
+            </LinearLayout>
+        </com.andexert.library.RippleView>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Combined any two saved sets"
+            android:layout_marginLeft="80dp"
+            android:textSize="12sp"
+            />
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>

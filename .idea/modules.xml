@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MaterialDesign/MaterialDesign.iml" filepath="$PROJECT_DIR$/MaterialDesign/MaterialDesign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MelodySmartBLE.iml" filepath="$PROJECT_DIR$/MelodySmartBLE.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ambilWarna/ambilWarna.iml" filepath="$PROJECT_DIR$/ambilWarna/ambilWarna.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gif_imageview/gif_imageview.iml" filepath="$PROJECT_DIR$/gif_imageview/gif_imageview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/material_dialogs/material_dialogs.iml" filepath="$PROJECT_DIR$/material_dialogs/material_dialogs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ripple_effect/ripple_effect.iml" filepath="$PROJECT_DIR$/ripple_effect/ripple_effect.iml" />
+    </modules>
+  </component>
+</project>

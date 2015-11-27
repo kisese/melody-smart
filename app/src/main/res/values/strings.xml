@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Gloveset</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
+    <!-- navigation drawer item labels  -->
+    <string-array name="nav_drawer_labels">
+        <item>@string/title_messages</item>
+        <item>@string/title_friends</item>
+        <item>@string/title_home</item>
+        <item>@string/title_table</item>
+    </string-array>
+
+    <string name="title_messages">Messages</string>
+    <string name="title_friends">Friends</string>
+    <string name="title_home">Home</string>
+    <string name="title_table">Tables</string>
+
+    <string name="motion_text"><font size="30">Motion Triggered Gloveset</font>
+        <font size="16">Combine any two saved glovesets to create a motion triggered set </font></string>
+
+     <string name="sound_reactive_text"><font size="30">Sound Reactive</font>
+        <font size="16">Make your lights react to music  </font></string>
+
+     <string name="lights_text"><font size="30">Synchronize Your Lights</font>
+        <font size="16">Synchronized flashing patterns  </font></string>
+
+       <string name="controlled_text"><font size="30">Time Controlled show</font>
+        <font size="16">Combined any two saved sets  </font></string>
+</resources>
