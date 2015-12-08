@@ -9,6 +9,8 @@ import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.view.View;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import android.widget.Button;
@@ -43,7 +45,7 @@ public class ColorsActivity extends ActionBarActivity {
     private ButtonFlat next_btn;
     private ButtonRectangle select_color;
     private FingerColorsDBAdapter fingerColorsDBAdapter;
-    private int color;
+    private int color = Color.RED;
     private HashMap<String, String> finger_1_colors = new HashMap<String, String>();
     private HashMap<String, String> finger_2_colors = new HashMap<String, String>();
     private HashMap<String, String> finger_3_colors = new HashMap<String, String>();
@@ -65,7 +67,21 @@ public class ColorsActivity extends ActionBarActivity {
     private Intent i = null;
     private String hand;
     private String effect;
-
+    private ButtonRectangle clear_finger_1;
+    private ButtonRectangle clear_finger_2;
+    private ButtonRectangle clear_finger_3;
+    private ButtonRectangle clear_finger_4;
+    private ButtonRectangle reset_clear;
+    private Button color_1, color_2, color_3, color_4, color_5, color_6, color_7, color_8, color_9,
+            color_10, color_11, color_12, color_13, color_14, color_15, color_16, color_17,
+            color_18, color_19, color_20;
+    private RadioGroup fingers_group;
+    private RadioButton finger_1_radio;
+    private RadioButton finger_2_radio;
+    private RadioButton finger_3_radio;
+    private RadioButton finger_4_radio;
+    private HashMap<String, String> presets = new HashMap<>();
+    private ArrayList<String> colors = new ArrayList<>();
 
     @Override
     public void onCreate(final Bundle savedInstanceState) {
@@ -85,8 +101,6 @@ public class ColorsActivity extends ActionBarActivity {
         Intent intent = getIntent();
         hand = intent.getStringExtra("hand");
         effect = intent.getStringExtra("effect");
-
-        //  Toast.makeText(this, hand+ " " +effect, Toast.LENGTH_LONG).show();
 
         //lots of buttons
         finger_1_color1 = (Button) findViewById(R.id.finger_1_color1);
@@ -117,34 +131,125 @@ public class ColorsActivity extends ActionBarActivity {
         finger_4_color5 = (Button) findViewById(R.id.finger_4_color5);
         finger_4_color6 = (Button) findViewById(R.id.finger_4_color6);
 
-        clickListeners(finger_1_color1);
-        clickListeners(finger_1_color2);
-        clickListeners(finger_1_color3);
-        clickListeners(finger_1_color4);
-        clickListeners(finger_1_color5);
-        clickListeners(finger_1_color6);
+        color_1 = (Button) findViewById(R.id.color1);
+        color_2 = (Button) findViewById(R.id.color2);
+        color_3 = (Button) findViewById(R.id.color3);
+        color_4 = (Button) findViewById(R.id.color4);
+        color_5 = (Button) findViewById(R.id.color5);
+        color_6 = (Button) findViewById(R.id.color6);
+        color_7 = (Button) findViewById(R.id.color7);
+        color_8 = (Button) findViewById(R.id.color8);
+        color_9 = (Button) findViewById(R.id.color9);
+        color_10 = (Button) findViewById(R.id.color10);
 
-        clickListeners(finger_2_color1);
-        clickListeners(finger_2_color2);
-        clickListeners(finger_2_color3);
-        clickListeners(finger_2_color4);
-        clickListeners(finger_2_color5);
-        clickListeners(finger_2_color6);
+        color_11 = (Button) findViewById(R.id.color11);
+        color_12 = (Button) findViewById(R.id.color12);
+        color_13 = (Button) findViewById(R.id.color13);
+        color_14 = (Button) findViewById(R.id.color14);
+        color_15 = (Button) findViewById(R.id.color15);
+        color_16 = (Button) findViewById(R.id.color16);
+        color_17 = (Button) findViewById(R.id.color17);
+        color_18 = (Button) findViewById(R.id.color18);
+        color_19 = (Button) findViewById(R.id.color19);
+        color_20 = (Button) findViewById(R.id.color20);
 
-        clickListeners(finger_3_color1);
-        clickListeners(finger_3_color2);
-        clickListeners(finger_3_color3);
-        clickListeners(finger_3_color4);
-        clickListeners(finger_3_color5);
-        clickListeners(finger_3_color6);
+        fingers_group = (RadioGroup) findViewById(R.id.fingers_group);
+        finger_1_radio = (RadioButton) findViewById(R.id.finger_1_radio);
+        finger_2_radio = (RadioButton) findViewById(R.id.finger_2_radio);
+        finger_3_radio = (RadioButton) findViewById(R.id.finger_3_radio);
+        finger_4_radio = (RadioButton) findViewById(R.id.finger_4_radio);
 
-        clickListeners(finger_4_color1);
-        clickListeners(finger_4_color2);
-        clickListeners(finger_4_color3);
-        clickListeners(finger_4_color4);
-        clickListeners(finger_4_color5);
-        clickListeners(finger_4_color6);
+        //set presets
+        color_1.setBackgroundColor(Color.parseColor("#FF0000"));
+        color_2.setBackgroundColor(Color.parseColor("#00FF00"));
+        color_3.setBackgroundColor(Color.parseColor("#0000FF"));
+        color_4.setBackgroundColor(Color.parseColor("#FFFF00"));
+        color_5.setBackgroundColor(Color.parseColor("#F0EB6E"));
+        color_6.setBackgroundColor(Color.parseColor("#FF00FF"));
+        color_7.setBackgroundColor(Color.parseColor("#800000"));
+        color_8.setBackgroundColor(Color.parseColor("#A6142D"));
+        color_9.setBackgroundColor(Color.parseColor("#008000"));
+        color_10.setBackgroundColor(Color.parseColor("#800080"));
+        color_11.setBackgroundColor(Color.parseColor("#008080"));
+        color_12.setBackgroundColor(Color.parseColor("#000080"));
+        color_13.setBackgroundColor(Color.parseColor("#32CE55"));
+        color_14.setBackgroundColor(Color.parseColor("#1B8A39"));
+        color_15.setBackgroundColor(Color.parseColor("#8F8AF6"));
+        color_16.setBackgroundColor(Color.parseColor("#F3551B"));
+        color_17.setBackgroundColor(Color.parseColor("#CC641F"));
+        color_18.setBackgroundColor(Color.parseColor("#5AAAAA"));
+        color_19.setBackgroundColor(Color.parseColor("#F1D8BC"));
+        color_20.setBackgroundColor(Color.parseColor("#C00A5F"));
 
+        presets.put("1", "#FF0000");
+        presets.put("2", "#00FF00");
+        presets.put("3", "#0000FF");
+        presets.put("4", "#FFFF00");
+        presets.put("5", "#F0EB6E");
+        presets.put("6", "#FF00FF");
+        presets.put("7", "#800000");
+        presets.put("8", "#A6142D");
+        presets.put("9", "#008000");
+        presets.put("10", "#800080");
+        presets.put("11", "#008080");
+        presets.put("12", "#000080");
+        presets.put("13", "#32CE55");
+        presets.put("14", "#1B8A39");
+        presets.put("15", "#8F8AF6");
+        presets.put("16", "#F3551B");
+        presets.put("17", "#CC641F");
+        presets.put("18", "#5AAAAA");
+        presets.put("19", "#F1D8BC");
+        presets.put("20", "#C00A5F");
+
+        setColor(color_1, "1");
+        setColor(color_2, "2");
+        setColor(color_3, "3");
+        setColor(color_4, "4");
+        setColor(color_5, "5");
+        setColor(color_6, "6");
+        setColor(color_7, "7");
+        setColor(color_8, "8");
+        setColor(color_9, "9");
+        setColor(color_10, "10");
+        setColor(color_11, "11");
+        setColor(color_12, "12");
+        setColor(color_13, "13");
+        setColor(color_14, "14");
+        setColor(color_15, "15");
+        setColor(color_16, "16");
+        setColor(color_17, "17");
+        setColor(color_18, "18");
+        setColor(color_19, "19");
+        setColor(color_20, "20");
+
+//        finger_1_colors.put("finger_1_color_1", "#FF0000");
+//        finger_1_colors.put("finger_1_color_2", "#00FF00");
+//        finger_1_colors.put("finger_1_color_3", "#0000FF");
+//        finger_1_colors.put("finger_1_color_4", "#FFFF00");
+//        finger_1_colors.put("finger_1_color_5", "#00FFFF");
+//        finger_1_colors.put("finger_1_color_6", "#FF00FF");
+//
+//        finger_2_colors.put("finger_2_color_1", "#800000");
+//        finger_2_colors.put("finger_2_color_2", "#808000");
+//        finger_2_colors.put("finger_2_color_3", "#008000");
+//        finger_2_colors.put("finger_2_color_4", "#800080");
+//        finger_2_colors.put("finger_2_color_5", "#008080");
+//        finger_2_colors.put("finger_2_color_6", "#000080");
+//
+//        finger_3_colors.put("finger_3_color_1", "#32CE55");
+//        finger_3_colors.put("finger_3_color_2", "#1B8A39");
+//        finger_3_colors.put("finger_3_color_3", "#8F8AF6");
+//        finger_3_colors.put("finger_3_color_4", "#F3551B");
+//        finger_3_colors.put("finger_3_color_5", "#CC641F");
+//        finger_3_colors.put("finger_3_color_6", "#5AAAAA");
+//
+//        finger_4_colors.put("finger_4_color_1", "#F1D8BC");
+//        finger_4_colors.put("finger_4_color_2", "#C00A5F");
+//        finger_4_colors.put("finger_4_color_3", "#A6142D");
+//        finger_4_colors.put("finger_4_color_4", "#F0EB6E");
+//        finger_4_colors.put("finger_4_color_5", "#70DBAD");
+//        finger_4_colors.put("finger_4_color_6", "#FDFFBC");
 
         next_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -156,12 +261,216 @@ public class ColorsActivity extends ActionBarActivity {
             }
         });
 
+        fingers_group.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (fingers_group.getCheckedRadioButtonId() == R.id.finger_1_radio) {
+                    colorRow1();
+                    colors.clear();
+                } else if (fingers_group.getCheckedRadioButtonId() == R.id.finger_2_radio) {
+                    colorRow2();
+                    colors.clear();
+                } else if (fingers_group.getCheckedRadioButtonId() == R.id.finger_3_radio) {
+                    colorRow3();
+                    colors.clear();
+                } else if (fingers_group.getCheckedRadioButtonId() == R.id.finger_4_radio) {
+                    colorRow4();
+                    colors.clear();
+                }
+
+            }
+
+        });
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        mToolbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i3 = new Intent(ColorsActivity.this, MainActivity.class);
+                startActivity(i3);
+            }
+        });
         setSupportActionBar(mToolbar);
-        getSupportActionBar().setTitle(Html.fromHtml("<font color=\"#FFFFFF\">" + "Finger 1" + "</font"));
-        getSupportActionBar().getThemedContext();
-        getSupportActionBar().setIcon(new ColorDrawable(getResources().getColor(android.R.color.transparent)));
+    }
+
+    public void setColor(View view, final String key) {
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                colors.add(presets.get(key));
+            }
+        });
+    }
+
+    public void colorRow1() {
+        try {
+            finger_1_colors.put("finger_1_color_1", getRgb(colors.get(0)));
+            finger_1_colors.put("finger_1_color_2", getRgb(colors.get(1)));
+            finger_1_colors.put("finger_1_color_3", getRgb(colors.get(2)));
+            finger_1_colors.put("finger_1_color_4", getRgb(colors.get(3)));
+            finger_1_colors.put("finger_1_color_5", getRgb(colors.get(4)));
+            finger_1_colors.put("finger_1_color_6", getRgb(colors.get(5)));
+        } catch (IndexOutOfBoundsException e) {
+            e.printStackTrace();
+        }
+        row1();
+
+        Toast.makeText(ColorsActivity.this, finger_1_colors.get("finger_1_color_1") + " " +
+                finger_1_colors.get("finger_1_color_2"), Toast.LENGTH_LONG).show();
+    }
+
+    public void row1() {
+        try {
+            finger_1_color1.setBackgroundColor(Color.parseColor(colors.get(0)));
+            finger_1_color2.setBackgroundColor(Color.parseColor(colors.get(1)));
+            finger_1_color3.setBackgroundColor(Color.parseColor(colors.get(2)));
+            finger_1_color4.setBackgroundColor(Color.parseColor(colors.get(3)));
+            finger_1_color5.setBackgroundColor(Color.parseColor(colors.get(4)));
+            finger_1_color6.setBackgroundColor(Color.parseColor(colors.get(5)));
+        } catch (IndexOutOfBoundsException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void colorRow2() {
+        try {
+            finger_2_colors.put("finger_2_color_1", getRgb(colors.get(0)));
+            finger_2_colors.put("finger_2_color_2", getRgb(colors.get(1)));
+            finger_2_colors.put("finger_2_color_3", getRgb(colors.get(2)));
+            finger_2_colors.put("finger_2_color_4", getRgb(colors.get(3)));
+            finger_2_colors.put("finger_2_color_5", getRgb(colors.get(4)));
+            finger_2_colors.put("finger_2_color_6", getRgb(colors.get(5)));
+        } catch (IndexOutOfBoundsException e) {
+            e.printStackTrace();
+        }
+        row2();
+    }
+
+    public void row2() {
+        try {
+            finger_2_color1.setBackgroundColor(Color.parseColor(colors.get(0)));
+            finger_2_color2.setBackgroundColor(Color.parseColor(colors.get(1)));
+            finger_2_color3.setBackgroundColor(Color.parseColor(colors.get(2)));
+            finger_2_color4.setBackgroundColor(Color.parseColor(colors.get(3)));
+            finger_2_color5.setBackgroundColor(Color.parseColor(colors.get(4)));
+            finger_2_color6.setBackgroundColor(Color.parseColor(colors.get(5)));
+        } catch (IndexOutOfBoundsException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void colorRow3() {
+        try {
+            finger_3_colors.put("finger_3_color_1", getRgb(colors.get(0)));
+            finger_3_colors.put("finger_3_color_2", getRgb(colors.get(1)));
+            finger_3_colors.put("finger_3_color_3", getRgb(colors.get(2)));
+            finger_3_colors.put("finger_3_color_4", getRgb(colors.get(3)));
+            finger_3_colors.put("finger_3_color_5", getRgb(colors.get(4)));
+            finger_3_colors.put("finger_3_color_6", getRgb(colors.get(5)));
+        } catch (IndexOutOfBoundsException e) {
+            e.printStackTrace();
+        }
+        row3();
+    }
+
+    public void row3() {
+        try {
+            finger_3_color1.setBackgroundColor(Color.parseColor(colors.get(0)));
+            finger_3_color2.setBackgroundColor(Color.parseColor(colors.get(1)));
+            finger_3_color3.setBackgroundColor(Color.parseColor(colors.get(2)));
+            finger_3_color4.setBackgroundColor(Color.parseColor(colors.get(3)));
+            finger_3_color5.setBackgroundColor(Color.parseColor(colors.get(4)));
+            finger_3_color6.setBackgroundColor(Color.parseColor(colors.get(5)));
+        } catch (IndexOutOfBoundsException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void colorRow4() {
+        try {
+            finger_4_colors.put("finger_4_color_1", getRgb(colors.get(0)));
+            finger_4_colors.put("finger_4_color_2", getRgb(colors.get(1)));
+            finger_4_colors.put("finger_4_color_3", getRgb(colors.get(2)));
+            finger_4_colors.put("finger_4_color_4", getRgb(colors.get(3)));
+            finger_4_colors.put("finger_4_color_5", getRgb(colors.get(4)));
+            finger_4_colors.put("finger_4_color_6", getRgb(colors.get(5)));
+        } catch (IndexOutOfBoundsException e) {
+            e.printStackTrace();
+        }
+        row4();
+    }
+
+    public void row4() {
+        try {
+            finger_4_color1.setBackgroundColor(Color.parseColor(colors.get(0)));
+            finger_4_color2.setBackgroundColor(Color.parseColor(colors.get(1)));
+            finger_4_color3.setBackgroundColor(Color.parseColor(colors.get(2)));
+            finger_4_color4.setBackgroundColor(Color.parseColor(colors.get(3)));
+            finger_4_color5.setBackgroundColor(Color.parseColor(colors.get(4)));
+            finger_4_color6.setBackgroundColor(Color.parseColor(colors.get(5)));
+        } catch (IndexOutOfBoundsException e) {
+            e.printStackTrace();
+        }
+    }
+
+//    public void clearFinger1() {
+//        finger_1_color1.setBackgroundColor(Color.parseColor("#E1E1E1"));
+//        finger_1_color2.setBackgroundColor(Color.parseColor("#E1E1E1"));
+//        finger_1_color3.setBackgroundColor(Color.parseColor("#E1E1E1"));
+//        finger_1_color4.setBackgroundColor(Color.parseColor("#E1E1E1"));
+//        finger_1_color5.setBackgroundColor(Color.parseColor("#E1E1E1"));
+//        finger_1_color6.setBackgroundColor(Color.parseColor("#E1E1E1"));
+//        finger_1_colors.clear();
+//    }
+//
+//    public void clearFinger2() {
+//        finger_2_color1.setBackgroundColor(Color.parseColor("#E1E1E1"));
+//        finger_2_color2.setBackgroundColor(Color.parseColor("#E1E1E1"));
+//        finger_2_color3.setBackgroundColor(Color.parseColor("#E1E1E1"));
+//        finger_2_color4.setBackgroundColor(Color.parseColor("#E1E1E1"));
+//        finger_2_color5.setBackgroundColor(Color.parseColor("#E1E1E1"));
+//        finger_2_color6.setBackgroundColor(Color.parseColor("#E1E1E1"));
+//        finger_2_colors.clear();
+//    }
+//
+//    public void clearFinger3() {
+//        finger_3_color1.setBackgroundColor(Color.parseColor("#E1E1E1"));
+//        finger_3_color2.setBackgroundColor(Color.parseColor("#E1E1E1"));
+//        finger_3_color3.setBackgroundColor(Color.parseColor("#E1E1E1"));
+//        finger_3_color4.setBackgroundColor(Color.parseColor("#E1E1E1"));
+//        finger_3_color5.setBackgroundColor(Color.parseColor("#E1E1E1"));
+//        finger_3_color6.setBackgroundColor(Color.parseColor("#E1E1E1"));
+//        finger_3_colors.clear();
+//    }
+//
+//    public void clearFinger4() {
+//        finger_4_color1.setBackgroundColor(Color.parseColor("#E1E1E1"));
+//        finger_4_color2.setBackgroundColor(Color.parseColor("#E1E1E1"));
+//        finger_4_color3.setBackgroundColor(Color.parseColor("#E1E1E1"));
+//        finger_4_color4.setBackgroundColor(Color.parseColor("#E1E1E1"));
+//        finger_4_color5.setBackgroundColor(Color.parseColor("#E1E1E1"));
+//        finger_4_color6.setBackgroundColor(Color.parseColor("#E1E1E1"));
+//        finger_4_colors.clear();
+//    }
+//
+//    public void resetClear() {
+//        Intent i = new Intent(ColorsActivity.this, ColorsActivity.class);
+//        i.putExtra("hand", hand);
+//        i.putExtra("effect", effect);
+//        startActivity(i);
+//    }
+
+    public String getRgb(String hex) {
+        //int color = Integer.parseInt(hex.replace("#", ""), 16);
+        int color = Color.parseColor(hex);
+        int red = Color.red(color);
+        int green = Color.green(color);
+        int blue = Color.blue(color);
+        String rgbColor = String.format("%03d", red) + "," + String.format("%03d", green)
+                + "," + String.format("%03d", blue);
+        return rgbColor;
     }
 
     void openDialog(boolean supportsAlpha, final View view) {
@@ -186,94 +495,6 @@ public class ColorsActivity extends ActionBarActivity {
         dialog.show();
     }
 
-    public void clickListeners(View viewButton) {
-        final View view = viewButton;
-        viewButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                openDialog(false, view);
-
-                switch (view.getId()) {
-                    case R.id.finger_1_color1:
-                        finger_1_colors.put("finger_1_color_1", hexColor);
-                        break;
-                    case R.id.finger_1_color2:
-                        finger_1_colors.put("finger_1_color_2", hexColor);
-                        break;
-                    case R.id.finger_1_color3:
-                        finger_1_colors.put("finger_1_color_3", hexColor);
-                        break;
-                    case R.id.finger_1_color4:
-                        finger_1_colors.put("finger_1_color_4", hexColor);
-                        break;
-                    case R.id.finger_1_color5:
-                        finger_1_colors.put("finger_1_color_5", hexColor);
-                        break;
-                    case R.id.finger_1_color6:
-                        finger_1_colors.put("finger_1_color_6", hexColor);
-                        break;
-
-                    case R.id.finger_2_color1:
-                        finger_2_colors.put("finger_2_color_1", hexColor);
-                        break;
-                    case R.id.finger_2_color2:
-                        finger_2_colors.put("finger_2_color_2", hexColor);
-                        break;
-                    case R.id.finger_2_color3:
-                        finger_2_colors.put("finger_2_color_3", hexColor);
-                        break;
-                    case R.id.finger_2_color4:
-                        finger_2_colors.put("finger_2_color_4", hexColor);
-                        break;
-                    case R.id.finger_2_color5:
-                        finger_2_colors.put("finger_2_color_5", hexColor);
-                        break;
-                    case R.id.finger_2_color6:
-                        finger_2_colors.put("finger_2_color_6", hexColor);
-                        break;
-
-                    case R.id.finger_3_color1:
-                        finger_3_colors.put("finger_3_color_1", hexColor);
-                        break;
-                    case R.id.finger_3_color2:
-                        finger_3_colors.put("finger_3_color_2", hexColor);
-                        break;
-                    case R.id.finger_3_color3:
-                        finger_3_colors.put("finger_3_color_3", hexColor);
-                        break;
-                    case R.id.finger_3_color4:
-                        finger_3_colors.put("finger_3_color_4", hexColor);
-                        break;
-                    case R.id.finger_3_color5:
-                        finger_3_colors.put("finger_3_color_5", hexColor);
-                        break;
-                    case R.id.finger_3_color6:
-                        finger_3_colors.put("finger_3_color_6", hexColor);
-                        break;
-
-                    case R.id.finger_4_color1:
-                        finger_4_colors.put("finger_4_color_1", hexColor);
-                        break;
-                    case R.id.finger_4_color2:
-                        finger_4_colors.put("finger_4_color_2", hexColor);
-                        break;
-                    case R.id.finger_4_color3:
-                        finger_4_colors.put("finger_4_color_3", hexColor);
-                        break;
-                    case R.id.finger_4_color4:
-                        finger_4_colors.put("finger_4_color_4", hexColor);
-                        break;
-                    case R.id.finger_4_color5:
-                        finger_4_colors.put("finger_4_color_5", hexColor);
-                        break;
-                    case R.id.finger_4_color6:
-                        finger_4_colors.put("finger_4_color_6", hexColor);
-                        break;
-                }
-            }
-        });
-    }
 
     public void showDialog() {
         new MaterialDialog.Builder(this)
@@ -344,7 +565,7 @@ public class ColorsActivity extends ActionBarActivity {
             );
         }
 
-        if (fingerColorsDBAdapter.getRowCount() <= 4) {
+        if (fingerColorsDBAdapter.getRowCount() >= 4) {
             fingerColorsDBAdapter.updateMessage("Finger 1",
                     finger_1_colors.get("finger_1_color_1"),
                     finger_1_colors.get("finger_1_color_2"),

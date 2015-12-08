@@ -204,7 +204,13 @@ public class SendSaveActivity extends ActionBarActivity {
 
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
-        mToolbar.setTitle("Pattern 1");
+        mToolbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i3 = new Intent(SendSaveActivity.this, MainActivity.class);
+                startActivity(i3);
+            }
+        });
         setSupportActionBar(mToolbar);
        
         btn_send.setOnClickListener(new View.OnClickListener() {

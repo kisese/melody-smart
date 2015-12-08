@@ -7,6 +7,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.view.ActionMode;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.util.Log;
@@ -17,11 +18,12 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
-import com.felipecsl.gifimageview.library.GifImageView;
 import com.gc.materialdesign.views.ButtonRectangle;
 import com.yhtomit.brayo.bleserial.R;
 import com.yhtomit.brayo.bleserial.magic.MagicBox;
 import com.yhtomit.brayo.bleserial.magic.ToastMessage;
+
+import pl.droidsonroids.gif.GifImageView;
 
 /**
  * Created by Brayo on 7/9/2015.
@@ -41,7 +43,6 @@ public class EffectsActivity extends ActionBarActivity {
     private RadioButton color_wheel;
     private RadioButton no_effect;
     private ToastMessage warningMessage;
-    private GifImageView knight_rider_1_gif;
     private GifImageView knight_rider_2_gif;
     private GifImageView knight_rider_3_gif;
     private GifImageView knight_rider_4_gif;
@@ -50,6 +51,7 @@ public class EffectsActivity extends ActionBarActivity {
     private RadioButton rainbow_cycle;
     ConnectionManager connectionManager = new ConnectionManager();
     private TextView mDataField;
+    private pl.droidsonroids.gif.GifImageView knight_rider_1_gif;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -70,19 +72,13 @@ public class EffectsActivity extends ActionBarActivity {
         rainbow_cycle = (RadioButton) findViewById(R.id.effect_cycle);
         no_effect = (RadioButton) findViewById(R.id.effect_no_effect);
 
-        knight_rider_1_gif = (GifImageView) findViewById(R.id.knight_rider_1);
+        knight_rider_1_gif = (pl.droidsonroids.gif.GifImageView) findViewById(R.id.knight_rider_1);
         knight_rider_2_gif = (GifImageView) findViewById(R.id.knight_rider_2);
         knight_rider_3_gif = (GifImageView) findViewById(R.id.knight_rider_3);
         knight_rider_4_gif = (GifImageView) findViewById(R.id.knight_rider_4);
         rainbow_gif = (GifImageView) findViewById(R.id.rainbow);
         rainbow_cycle_gif = (GifImageView) findViewById(R.id.rainbow_cycle);
 
-        knight_rider_1_gif.startAnimation();
-        knight_rider_2_gif.startAnimation();
-        knight_rider_3_gif.startAnimation();
-        knight_rider_4_gif.startAnimation();
-        rainbow_gif.startAnimation();
-        rainbow_cycle_gif.startAnimation();
 
         hideAllGifs(knight_rider_1_gif);
         hideAllGifs(knight_rider_2_gif);
@@ -97,7 +93,13 @@ public class EffectsActivity extends ActionBarActivity {
         clickListeners();
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
-        mToolbar.setTitle("Synchronization");
+        mToolbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i3 = new Intent(EffectsActivity.this, MainActivity.class);
+                startActivity(i3);
+            }
+        });
         setSupportActionBar(mToolbar);
 
     }

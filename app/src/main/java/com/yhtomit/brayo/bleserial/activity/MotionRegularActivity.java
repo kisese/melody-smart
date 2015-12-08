@@ -49,8 +49,14 @@ public class MotionRegularActivity  extends ActionBarActivity {
         btn_regular = (Button)findViewById(R.id.btn_regular);
         btn_time_controlled = (Button)findViewById(R.id.btn_motion_triggered);
 
-        mToolbar.setTitleTextColor(Color.BLACK);
-        mToolbar.setTitle("");
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        mToolbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i3 = new Intent(MotionRegularActivity.this, MainActivity.class);
+                startActivity(i3);
+            }
+        });
         setSupportActionBar(mToolbar);
         clickListeners();
     }
@@ -66,7 +72,8 @@ public class MotionRegularActivity  extends ActionBarActivity {
         motion_triggered_gloveset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MotionRegularActivity.this, MotionHandActivity.class);
+                Intent intent = new Intent(MotionRegularActivity.this, MotionTriggeredGlovesetActivity.class);
+                intent.putExtra("hand", "H2");
                 startActivity(intent);
             }
         });

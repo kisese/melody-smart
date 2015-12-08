@@ -11,7 +11,6 @@ import android.text.Html;
 import android.util.Log;
 import android.view.View;
 
-import com.felipecsl.gifimageview.library.GifImageView;
 import com.gc.materialdesign.views.ButtonRectangle;
 import android.widget.CheckBox;
 import android.widget.RadioButton;
@@ -22,6 +21,8 @@ import android.widget.Toast;
 import com.yhtomit.brayo.bleserial.R;
 import com.yhtomit.brayo.bleserial.magic.MagicBox;
 import com.yhtomit.brayo.bleserial.magic.ToastMessage;
+
+import pl.droidsonroids.gif.GifImageView;
 
 
 /**
@@ -139,7 +140,13 @@ public class Finger3PatternActivity  extends ActionBarActivity {
                 }
         });
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
-        mToolbar.setTitle("Pattern 3");
+        mToolbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i3 = new Intent(Finger3PatternActivity.this, MainActivity.class);
+                startActivity(i3);
+            }
+        });
         setSupportActionBar(mToolbar);
     }
 

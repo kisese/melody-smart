@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#FFFFFF"
+    android:background="#000000"
     android:layout_height="match_parent">
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
@@ -191,7 +191,7 @@
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/community_pic"
+                android:src="@drawable/mask_pic"
                 android:layout_marginRight="40dp"
                 />
 
@@ -208,11 +208,11 @@
             app:rv_zoomScale="1.1"
             app:rv_zoom="true"
             rv_centered="true">
+
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/community_pic"
-                android:onClick="savedGlovesets"
+                android:src="@drawable/shoes_pic"
                 />
 
         </com.andexert.library.RippleView>

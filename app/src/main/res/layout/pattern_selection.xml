@@ -3,10 +3,12 @@
     xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
+    android:background="#000000"
     android:layout_height="match_parent">
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:background="#000000"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -87,7 +89,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/colorAccent"
             android:layout_marginTop="10dp"
-            android:text="Chroma"/>
+            android:text="Solid"/>
     </RadioGroup>
 
 
@@ -97,35 +99,35 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
-            <com.felipecsl.gifimageview.library.GifImageView
+            <pl.droidsonroids.gif.GifImageView
                 android:id="@+id/strobe"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:src="@drawable/strobe"
                 />
 
-            <com.felipecsl.gifimageview.library.GifImageView
+            <pl.droidsonroids.gif.GifImageView
                 android:id="@+id/hyperstrobe"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:src="@drawable/hyper"
                 />
 
-            <com.felipecsl.gifimageview.library.GifImageView
+            <pl.droidsonroids.gif.GifImageView
                 android:id="@+id/dops"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:src="@drawable/dops"
                 />
 
-            <com.felipecsl.gifimageview.library.GifImageView
+            <pl.droidsonroids.gif.GifImageView
                 android:id="@+id/strobie"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:src="@drawable/strobie"
                 />
 
-            <com.felipecsl.gifimageview.library.GifImageView
+            <pl.droidsonroids.gif.GifImageView
                 android:id="@+id/chroma"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
@@ -142,6 +144,7 @@
         android:text="Customs"
         android:layout_marginLeft="30dp"
         android:textSize="20sp"
+        android:textColor="#FFFFFF"
         />
 
     <RadioGroup
@@ -226,51 +229,14 @@
 
     </RadioGroup>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:paddingLeft="30dp"
-        >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Laser"
-            android:layout_marginLeft="30dp"
-            android:rotation="270"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Strobe"
-            android:layout_marginLeft="40dp"
-            android:rotation="270"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Ribbon"
-            android:layout_marginLeft="40dp"
-            android:rotation="270"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Hypno"
-            android:layout_marginLeft="40dp"
-            android:rotation="270"
-            />
-    </LinearLayout>
 
     <CheckBox
         android:id="@+id/no_pattern"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
         android:text="Apply Pattern to all fingers"
         />
 

@@ -85,6 +85,14 @@ public class MotionTriggeredGlovesetActivity extends ActionBarActivity {
         clickListeners();
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        mToolbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i3 = new Intent(MotionTriggeredGlovesetActivity.this, MainActivity.class);
+                startActivity(i3);
+            }
+        });
         setSupportActionBar(mToolbar);
     }
 
@@ -103,12 +111,16 @@ public class MotionTriggeredGlovesetActivity extends ActionBarActivity {
                     }
 
                     if (send_string.size() == 2) {
-                        feedback.setText("With motion: " + presets[0] + "\n" +
-                                " Without motion: " + presets[1]);
-                        Intent i = new Intent(MotionTriggeredGlovesetActivity.this, ScanActivity.class);
-                        i.putExtra("send_string", "Y,S"+ value +"," + hand + "|(" + send_string.get(0) + "):(" + send_string.get(1) + ")");
-                        startActivity(i);
-                        send_string.clear();
+                        try {
+                            feedback.setText("With motion: " + presets[0] + "\n" +
+                                    "Without motion: " + presets[1]);
+                            Intent i = new Intent(MotionTriggeredGlovesetActivity.this, ScanActivity.class);
+                            i.putExtra("send_string", "Y,S" + value + "," + hand + "|(" + send_string.get(0) + "):(" + send_string.get(1) + ")");
+                            startActivity(i);
+                            send_string.clear();
+                        }catch (ArrayIndexOutOfBoundsException e){
+                            e.printStackTrace();
+                        }
                     }
                 }else{
                     Toast.makeText(MotionTriggeredGlovesetActivity.this,

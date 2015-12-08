@@ -53,6 +53,13 @@ public class MainActivity extends ActionBarActivity {
             }while(cursor.moveToNext());
         }
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        mToolbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i3 = new Intent(MainActivity.this, MainActivity.class);
+                startActivity(i3);
+            }
+        });
         setSupportActionBar(mToolbar);
     }
 

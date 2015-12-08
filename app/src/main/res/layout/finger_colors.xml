@@ -6,17 +6,29 @@
 
     <include
         android:id="@+id/finger_1"
-        layout="@layout/finger_1" />
+        layout="@layout/finger_1"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" />
 
     <include
         android:id="@+id/finger_2"
-        layout="@layout/finger_2" />
+        layout="@layout/finger_2"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" />
 
     <include
         android:id="@+id/finger_3"
-        layout="@layout/finger_3" />
+        layout="@layout/finger_3"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" />
 
     <include
         android:id="@+id/finger_4"
-        layout="@layout/finger_4" />
+        layout="@layout/finger_4"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" />
 </LinearLayout>

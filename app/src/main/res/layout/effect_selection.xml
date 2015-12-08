@@ -3,11 +3,14 @@
     xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#000000"
+    >
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
+    android:background="#000000"
     android:layout_height="match_parent">
 
     <include
@@ -17,7 +20,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Please select an effect"
+        android:text="Synchronization"
         android:textColor="@color/colorPrimary"
         android:typeface="sans"
         android:layout_gravity="center"
@@ -102,8 +105,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
-            <com.felipecsl.gifimageview.library.GifImageView
-
+            <pl.droidsonroids.gif.GifImageView
                 android:id="@+id/knight_rider_1"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
@@ -111,7 +113,7 @@
                 android:layout_marginTop="10dp"
                 />
 
-            <com.felipecsl.gifimageview.library.GifImageView
+            <pl.droidsonroids.gif.GifImageView
                 android:id="@+id/knight_rider_2"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
@@ -119,7 +121,7 @@
                 android:layout_marginTop="10dp"
                 />
 
-            <com.felipecsl.gifimageview.library.GifImageView
+            <pl.droidsonroids.gif.GifImageView
                 android:id="@+id/knight_rider_3"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
@@ -127,7 +129,7 @@
                 android:layout_marginTop="10dp"
                 />
 
-            <com.felipecsl.gifimageview.library.GifImageView
+            <pl.droidsonroids.gif.GifImageView
                 android:id="@+id/knight_rider_4"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
@@ -135,7 +137,7 @@
                 android:layout_marginTop="10dp"
                 />
 
-            <com.felipecsl.gifimageview.library.GifImageView
+            <pl.droidsonroids.gif.GifImageView
                 android:id="@+id/rainbow"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
@@ -143,7 +145,7 @@
                 android:layout_marginTop="10dp"
                 />
 
-            <com.felipecsl.gifimageview.library.GifImageView
+            <pl.droidsonroids.gif.GifImageView
                 android:id="@+id/rainbow_cycle"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"

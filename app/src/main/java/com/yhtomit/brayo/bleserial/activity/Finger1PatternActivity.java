@@ -18,11 +18,12 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.felipecsl.gifimageview.library.GifImageView;
 import com.gc.materialdesign.views.ButtonRectangle;
 import com.yhtomit.brayo.bleserial.R;
 import com.yhtomit.brayo.bleserial.magic.MagicBox;
 import com.yhtomit.brayo.bleserial.magic.ToastMessage;
+
+import pl.droidsonroids.gif.GifImageView;
 
 
 /**
@@ -99,11 +100,6 @@ public class Finger1PatternActivity extends ActionBarActivity {
         strobie_gif = (GifImageView)findViewById(R.id.strobie);
         chroma_gif = (GifImageView)findViewById(R.id.chroma);
 
-        strobe_gif.startAnimation();
-        hyperstrobe_gif.startAnimation();
-        dops_gif.startAnimation();
-        strobie_gif.startAnimation();
-        chroma_gif.startAnimation();
 
         patternViewer.hideViews(strobe_gif);
         patternViewer.hideViews(hyperstrobe_gif);
@@ -115,7 +111,13 @@ public class Finger1PatternActivity extends ActionBarActivity {
         doNext();
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
-        mToolbar.setTitle("Pattern Selection");
+        mToolbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i3 = new Intent(Finger1PatternActivity.this, MainActivity.class);
+                startActivity(i3);
+            }
+        });
         setSupportActionBar(mToolbar);
     }
 
@@ -130,20 +132,25 @@ public class Finger1PatternActivity extends ActionBarActivity {
                        pattern_strobie.isChecked() ||
                        pattern_chroma.isChecked()
                        ) {
-                   if(finger_1.isChecked() ||
-                                   finger_2.isChecked() ||
-                                   finger_3.isChecked() ||
-                                   finger_4.isChecked()
-                           ) {
+//                   if(finger_1.isChecked() ||
+//                                   finger_2.isChecked() ||
+//                                   finger_3.isChecked() ||
+//                                   finger_4.isChecked()
+//                           ) {
                        if (all_fingers.isChecked()) {
                            i2.putExtra("hand", hand);
                            i2.putExtra("effect", effect);
                            i2.putExtra("all_fingers", "F0");
                            startActivity(i2);
-                   }
+                  }else{
+                           i.putExtra("hand", hand);
+                           i.putExtra("effect", effect);
+                           i.putExtra("all_fingers", "F0");
+                           startActivity(i);
+                       }
 
-                   }else
-                       warningMessage.showToastMessage("Please select a finger");
+//                   }else
+//                       warningMessage.showToastMessage("Please select a finger");
                }else
                 warningMessage.showToastMessage("Please select a pattern");
             }
