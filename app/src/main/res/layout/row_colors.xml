@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    >
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.andexert.library.RippleView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:rv_color="@color/colorPrimary"
+            app:rv_framerate="50"
+            app:rv_zoomScale="0.1"
+            app:rv_zoom="false"
+            rv_centered="false">
+        <Button
+            android:id="@+id/color1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+        </com.andexert.library.RippleView>
+
+        <com.andexert.library.RippleView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:rv_color="@color/colorPrimary"
+            app:rv_framerate="50"
+            app:rv_zoomScale="0.1"
+            app:rv_zoom="false"
+            rv_centered="false">
+        <Button
+            android:id="@+id/color2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+        </com.andexert.library.RippleView>
+
+        <com.andexert.library.RippleView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:rv_color="@color/colorPrimary"
+            app:rv_framerate="50"
+            app:rv_zoomScale="0.1"
+            app:rv_zoom="false"
+            rv_centered="false">
+        <Button
+            android:id="@+id/color3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+        </com.andexert.library.RippleView>
+
+        <com.andexert.library.RippleView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:rv_color="@color/colorPrimary"
+            app:rv_framerate="50"
+            app:rv_zoomScale="0.1"
+            app:rv_zoom="false"
+            rv_centered="false">
+        <Button
+            android:id="@+id/color4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+</com.andexert.library.RippleView>
+
+        <com.andexert.library.RippleView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:rv_color="@color/colorPrimary"
+            app:rv_framerate="50"
+            app:rv_zoomScale="0.1"
+            app:rv_zoom="false"
+            rv_centered="false">
+        <Button
+            android:id="@+id/color5"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+</com.andexert.library.RippleView>
+
+        <com.andexert.library.RippleView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:rv_color="@color/colorPrimary"
+            app:rv_framerate="50"
+            app:rv_zoomScale="0.1"
+            app:rv_zoom="false"
+            rv_centered="false">
+        <Button
+            android:id="@+id/color6"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+</com.andexert.library.RippleView>
+
+        <com.andexert.library.RippleView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:rv_color="@color/colorPrimary"
+            app:rv_framerate="50"
+            app:rv_zoomScale="0.1"
+            app:rv_zoom="false"
+            rv_centered="false">
+        <Button
+            android:id="@+id/color7"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+</com.andexert.library.RippleView>
+
+        <com.andexert.library.RippleView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:rv_color="@color/colorPrimary"
+            app:rv_framerate="50"
+            app:rv_zoomScale="0.1"
+            app:rv_zoom="false"
+            rv_centered="false">
+        <Button
+            android:id="@+id/color8"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+</com.andexert.library.RippleView>
+
+        <com.andexert.library.RippleView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:rv_color="@color/colorPrimary"
+            app:rv_framerate="50"
+            app:rv_zoomScale="0.1"
+            app:rv_zoom="false"
+            rv_centered="false">
+        <Button
+            android:id="@+id/color9"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+</com.andexert.library.RippleView>
+
+        <com.andexert.library.RippleView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:rv_color="@color/colorPrimary"
+            app:rv_framerate="50"
+            app:rv_zoomScale="0.1"
+            app:rv_zoom="false"
+            rv_centered="false">
+        <Button
+            android:id="@+id/color10"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+</com.andexert.library.RippleView>
+
+        <com.andexert.library.RippleView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:rv_color="@color/colorPrimary"
+            app:rv_framerate="50"
+            app:rv_zoomScale="0.1"
+            app:rv_zoom="false"
+            rv_centered="false">
+        <Button
+            android:id="@+id/color11"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+</com.andexert.library.RippleView>
+
+        <com.andexert.library.RippleView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:rv_color="@color/colorPrimary"
+            app:rv_framerate="50"
+            app:rv_zoomScale="0.1"
+            app:rv_zoom="false"
+            rv_centered="false">
+        <Button
+            android:id="@+id/color12"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+</com.andexert.library.RippleView>
+
+        <com.andexert.library.RippleView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:rv_color="@color/colorPrimary"
+            app:rv_framerate="50"
+            app:rv_zoomScale="0.1"
+            app:rv_zoom="false"
+            rv_centered="false">
+        <Button
+            android:id="@+id/color13"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+</com.andexert.library.RippleView>
+
+        <com.andexert.library.RippleView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:rv_color="@color/colorPrimary"
+            app:rv_framerate="50"
+            app:rv_zoomScale="0.1"
+            app:rv_zoom="false"
+            rv_centered="false">
+        <Button
+            android:id="@+id/color14"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+</com.andexert.library.RippleView>
+
+        <com.andexert.library.RippleView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:rv_color="@color/colorPrimary"
+            app:rv_framerate="50"
+            app:rv_zoomScale="0.1"
+            app:rv_zoom="false"
+            rv_centered="false">
+        <Button
+            android:id="@+id/color15"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+</com.andexert.library.RippleView>
+
+        <com.andexert.library.RippleView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:rv_color="@color/colorPrimary"
+            app:rv_framerate="50"
+            app:rv_zoomScale="0.1"
+            app:rv_zoom="false"
+            rv_centered="false">
+        <Button
+            android:id="@+id/color16"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+</com.andexert.library.RippleView>
+
+        <com.andexert.library.RippleView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:rv_color="@color/colorPrimary"
+            app:rv_framerate="50"
+            app:rv_zoomScale="0.1"
+            app:rv_zoom="false"
+            rv_centered="false">
+        <Button
+            android:id="@+id/color17"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+</com.andexert.library.RippleView>
+
+        <com.andexert.library.RippleView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:rv_color="@color/colorPrimary"
+            app:rv_framerate="50"
+            app:rv_zoomScale="0.1"
+            app:rv_zoom="false"
+            rv_centered="false">
+        <Button
+            android:id="@+id/color18"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+</com.andexert.library.RippleView>
+
+        <com.andexert.library.RippleView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:rv_color="@color/colorPrimary"
+            app:rv_framerate="50"
+            app:rv_zoomScale="0.1"
+            app:rv_zoom="false"
+            rv_centered="false">
+        <Button
+            android:id="@+id/color19"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+</com.andexert.library.RippleView>
+
+        <com.andexert.library.RippleView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:rv_color="@color/colorPrimary"
+            app:rv_framerate="50"
+            app:rv_zoomScale="0.1"
+            app:rv_zoom="false"
+            rv_centered="false">
+        <Button
+            android:id="@+id/color20"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+        </com.andexert.library.RippleView>
+    </LinearLayout>
+</HorizontalScrollView>
