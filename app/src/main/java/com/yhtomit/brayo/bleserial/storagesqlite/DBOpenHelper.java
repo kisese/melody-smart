@@ -13,7 +13,7 @@ public class DBOpenHelper extends SQLiteOpenHelper {
     public static final String TABLE_NAME = "finger_colors";
 
 
-    public static final int VERSION = 2;
+    public static final int VERSION = 4;
     public static final String KEY_ID = "_id";
     public static final String KEY_FINGER_ID = "finger_id";
     public static final String KEY_COLOR_1 = "color_1";
